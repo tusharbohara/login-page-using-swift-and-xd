@@ -42,11 +42,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" backgroundImage="btn_login"/>
+                                <connections>
+                                    <action selector="btnLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZSA-WE-1y1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qo-Vm-NhU">
-                                <rect key="frame" x="100" y="694" width="199" height="30"/>
+                                <rect key="frame" x="98" y="694" width="203" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Got problem while loggen in?">
+                                <state key="normal" title="Got problem while logging in?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
@@ -71,6 +74,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="forgotPassword" destination="2qo-Vm-NhU" id="5Et-em-m3h"/>
                         <outlet property="passwordField" destination="WkF-ai-FYq" id="Boi-eB-Oay"/>
                         <outlet property="usernameField" destination="QNf-B7-vsl" id="w9A-7k-6fF"/>
                     </connections>

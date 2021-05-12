@@ -12,6 +12,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //properties
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var forgotPassword: UIButton!
+    
     
     //actions
     @IBAction func bgOutside(_ sender: UITapGestureRecognizer) {
@@ -19,7 +21,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         passwordField.resignFirstResponder()
     }
     
-
+    
+    @IBAction func btnLogin(_ sender: Any) {
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -27,6 +33,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         usernameField.tag = 0
         passwordField.delegate = self
         passwordField.tag = 0
+        forgotPassword.titleLabel?.underline()
+        
+        
     }
     
     func textFieldShouldReturn( _ textField: UITextField) -> Bool {   //delegate method
@@ -49,5 +58,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
+}
+
+
+extension UILabel {
+    func underline() {
+        if let textUnwrapped = self.text {
+            let underlineAttribute = [NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue]
+            let underlineAttributedString = NSAttributedString(string: textUnwrapped, attributes: underlineAttribute)
+            
+            self.attributedText = underlineAttributedString
+        }
+    }
 }
 

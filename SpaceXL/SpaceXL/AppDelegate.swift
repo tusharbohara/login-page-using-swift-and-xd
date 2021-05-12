@@ -14,6 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //run a loop during which the receiver processes data from all attached input sources
+        RunLoop.current.run(until: NSDate(timeIntervalSinceNow:1) as Date)
         return true
     }
 
